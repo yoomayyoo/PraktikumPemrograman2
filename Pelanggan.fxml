@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="498.0" prefWidth="643.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.PelangganController">
+    <TableView fx:id="tablePelanggan" layoutX="17.0" layoutY="170.0" prefHeight="316.0" prefWidth="611.0">
+        <columns>
+            <TableColumn fx:id="colPelangganId" prefWidth="100.0" text="ID" />
+            <TableColumn fx:id="colPelangganNama" prefWidth="198.66663360595703" text="Nama" />
+            <TableColumn fx:id="colPelangganEmail" prefWidth="202.00003051757812" text="Email" />
+            <TableColumn fx:id="colPelangganTelepon" prefWidth="100.0" text="Telepon" />
+        </columns>
+    </TableView>
+
+    <!-- Form untuk input data pelanggan -->
+    <TextField fx:id="tfNama" layoutX="116.0" layoutY="14.0" promptText="Nama" />
+    <TextField fx:id="tfEmail" layoutX="116.0" layoutY="50.0" promptText="Email" />
+    <TextField fx:id="tfTelepon" layoutX="117.0" layoutY="88.0" promptText="Telepon" />
+    
+    <Button layoutX="108.0" layoutY="134.0" onAction="#handleAddPelanggan" text="Add" />
+    <Button layoutX="172.0" layoutY="134.0" onAction="#handleDeletePelanggan" text="Delete" />
+    <Button layoutX="247.0" layoutY="134.0" onAction="#handleEditPelanggan" text="Edit" />
+
+    <Text layoutX="21.0" layoutY="31.0" text="Nama:" />
+    <Text layoutX="23.0" layoutY="67.0" text="Email:" />
+    <Text layoutX="26.0" layoutY="105.0" text="Telepon:" />
+</AnchorPane>
